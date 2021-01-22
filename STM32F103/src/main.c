@@ -224,7 +224,7 @@ void LED_Switch_init(void)
 	/* disable SWD, so pins are available */
 	GPIO_PinRemapConfig(GPIO_Remap_SWJ_Disable, ENABLE);
 #endif /* ST_Link */
-#if defined(StickLink) || defined(GreenLink)
+#if defined(StickLink) || defined(GreenLink) || defined (IrmpMini)
 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
 #endif /* StickLink */
 	/* start with wakeup and reset switch off */

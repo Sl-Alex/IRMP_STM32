@@ -94,6 +94,10 @@ ifeq ($(Platform), MapleMini_2k_ExtBd)
 DEFINES += -DMapleMini_2k_ExtBd
 TARGET = MapleMini_2k_ExtBd
 endif
+ifeq ($(Platform), IrmpMini)
+DEFINES += -DIrmpMini
+TARGET = IrmpMini
+endif
 
 DATE := $(shell date +"%F_%H-%M")
 TARGET := $(DATE)_$(TARGET)
@@ -139,7 +143,7 @@ DEFINES += -DDEBUG
 TARGET := $(TARGET)_DBG
 endif
 
-COMPILED_BY = jrie
+COMPILED_BY = SlAlex
 TARGET := $(TARGET)_$(COMPILED_BY)
 
 $(TARGET).bin: $(TARGET).elf
